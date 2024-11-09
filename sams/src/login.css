@@ -1,0 +1,25 @@
+#header{
+    color: blue;    
+
+    padding-left: 350px;
+    padding-bottom: 20px;
+}
+#mainbloc{
+    padding-left: 200px;;
+}
+#fname
+{
+    margin:20px;
+    
+}
+#pass
+{
+ margin-bottom: 10px;
+}
+button{
+    height:35px;
+    width:99px;
+   margin: 10px;
+   
+
+}
