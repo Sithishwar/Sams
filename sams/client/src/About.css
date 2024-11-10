@@ -1,0 +1,144 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #3a3a3a, #1a1a1a);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Container for About Us page */
+.about-us-container {
+    width: 100%;
+    max-width: 750px;
+    background: #2e2e2e;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    display: grid;
+    gap: 24px;
+    animation: fadeIn 1s ease-out;
+    text-align: center;
+}
+
+/* Header styling */
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    background: linear-gradient(45deg, #4CAF50, #2196F3);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideDown 1s ease-out;
+}
+
+/* About content styling */
+.about-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #d0d0d0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Team and Mission sections */
+.team-section, .mission-section {
+    margin-bottom: 30px;
+}
+
+.team-section h3, .mission-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #66bb6a;
+}
+
+.team-section p, .mission-section p {
+    font-size: 16px;
+    color: #d0d0d0;
+    line-height: 1.6;
+}
+
+/* Footer navigation buttons aligned in a row */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #ddd;
+    background: #444;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:hover {
+    background: #666;
+    transform: translateY(-2px);
+}
+
+/* Fade-in and slide-down animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 500px) {
+    .about-us-container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .about-content h2 {
+        font-size: 20px;
+    }
+
+    .nav-btn {
+        font-size: 14px;
+    }
+}
