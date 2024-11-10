@@ -1,0 +1,177 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #444, #222);
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container for the entire login page */
+.login-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 24px;
+  width: 100%;
+  max-width: 450px;  /* Increased max width */
+  padding: 40px;      /* Increased padding */
+  border-radius: 12px;
+  background: #2e2e2e;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 1s ease-out;
+}
+
+/* Header styling */
+.header h1 {
+  font-size: 26px; /* Slightly increased font size */
+  font-weight: bold;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(45deg, #4CAF50, #2196F3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+/* Login form styling */
+.login-form {
+  display: grid;
+  gap: 24px;
+}
+
+/* Label and input field styling */
+label {
+  font-weight: bold;
+  color: #c0c0c0;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px;  /* Slightly increased padding */
+  font-size: 15px;
+  border: 1.5px solid #555;
+  border-radius: 8px;
+  background-color: #333;
+  color: #eee;
+  transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+input::placeholder {
+  font-size: 13px;
+  color: #888;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  background-color: #3a3a3a;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+/* Error message styling */
+.error-message {
+  color: #e57373;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Action buttons */
+.actions {
+  display: grid;
+  gap: 12px; /* Increased gap between buttons */
+  text-align: center;
+}
+
+.forgot-link {
+  color: #4CAF50;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+button {
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #4CAF50, #66bb6a);
+  color: #fff;
+}
+
+.signup-btn {
+  background: linear-gradient(135deg, #2196F3, #42a5f5);
+  color: #fff;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Footer navigation buttons */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.nav-btn {
+  background: #555;
+  color: #ddd;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+}
+
+.nav-btn:hover {
+  background: #666;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .login-container {
+    padding: 25px;
+    gap: 20px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  button, input {
+    font-size: 14px;
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
